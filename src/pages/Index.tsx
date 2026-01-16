@@ -6,7 +6,6 @@ import ProgramSection from "@/components/landing/ProgramSection";
 import ScheduleSection from "@/components/landing/ScheduleSection";
 import BenefitsSection from "@/components/landing/BenefitsSection";
 import InvestmentSection from "@/components/landing/InvestmentSection";
-import TimelineSection from "@/components/landing/TimelineSection";
 import AuthoritySection from "@/components/landing/AuthoritySection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
 import Footer from "@/components/landing/Footer";
@@ -22,7 +21,6 @@ const Index = () => {
       <ScheduleSection />
       <BenefitsSection />
       <InvestmentSection />
-      <TimelineSection />
       <AuthoritySection />
       <FinalCTASection />
       <Footer />

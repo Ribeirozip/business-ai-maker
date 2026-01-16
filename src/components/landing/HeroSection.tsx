@@ -5,13 +5,11 @@ import logoIcon from "@/assets/logo-icon.png";
 import logoCeuma from "@/assets/logo-ceuma.png";
 import logoOxygeni from "@/assets/logo-oxygeni.png";
 
+const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
+
 const HeroSection = () => {
   const scrollToProgram = () => {
     document.getElementById("programa")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToCTA = () => {
-    document.getElementById("investimento")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -51,8 +49,7 @@ const HeroSection = () => {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Um treinamento executivo prático para gestores e empresários aplicarem IA no negócio e ganharem{" "}
-              <strong className="text-accent">eficiência, escala e vantagem competitiva.</strong>
+              <strong className="text-accent">Aprenda IA com quem faz.</strong> Um treinamento executivo prático para gestores e empresários aplicarem IA no negócio e ganharem eficiência, escala e vantagem competitiva.
             </p>
 
             {/* Bullets */}
@@ -85,7 +82,12 @@ const HeroSection = () => {
               transition={{ delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-3 sm:gap-4"
             >
-              <Button variant="hero" size="xl" onClick={scrollToCTA} className="w-full sm:w-auto">
+              <Button 
+                variant="hero" 
+                size="xl" 
+                onClick={() => window.open(ENROLLMENT_URL, "_blank")} 
+                className="w-full sm:w-auto"
+              >
                 <Rocket className="w-5 h-5" />
                 Garanta sua vaga agora
               </Button>

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Shield, CreditCard, CheckCircle2 } from "lucide-react";
+import { Shield, CreditCard, CheckCircle2, Calendar } from "lucide-react";
+
+const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
 
 const InvestmentSection = () => {
   return (
@@ -43,23 +45,18 @@ const InvestmentSection = () => {
                 </span>
               </div>
 
-              {/* Price */}
-              <div className="text-center mb-8">
-                <div className="text-5xl md:text-6xl font-bold text-foreground mb-2">
-                  R$ 1.674<span className="text-2xl">,00</span>
+              {/* Price - Only installment */}
+              <div className="text-center mb-6">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-2">
+                  6x de R$ 279<span className="text-2xl">,00</span>
                 </div>
-                <p className="text-muted-foreground">à vista</p>
-                
-                <div className="flex items-center justify-center gap-2 my-4">
-                  <div className="h-px w-16 bg-border" />
-                  <span className="text-muted-foreground text-sm">ou</span>
-                  <div className="h-px w-16 bg-border" />
-                </div>
-                
-                <div className="text-2xl md:text-3xl font-bold text-accent">
-                  6x de R$ 279,00
-                </div>
-                <p className="text-muted-foreground text-sm mt-1">no cartão de crédito</p>
+                <p className="text-muted-foreground">no cartão de crédito</p>
+              </div>
+
+              {/* Class start date */}
+              <div className="flex items-center justify-center gap-2 mb-6 p-3 bg-accent/10 rounded-xl">
+                <Calendar className="w-5 h-5 text-accent" />
+                <span className="text-foreground font-medium">Início das aulas: 28/02</span>
               </div>
 
               {/* What's included */}
@@ -86,7 +83,12 @@ const InvestmentSection = () => {
               </div>
 
               {/* CTA Button */}
-              <Button variant="cta" size="xl" className="w-full">
+              <Button 
+                variant="cta" 
+                size="xl" 
+                className="w-full"
+                onClick={() => window.open(ENROLLMENT_URL, "_blank")}
+              >
                 <Shield className="w-5 h-5" />
                 Garantir minha vaga agora
               </Button>

@@ -2,11 +2,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
 
-const FinalCTASection = () => {
-  const scrollToCTA = () => {
-    document.getElementById("investimento")?.scrollIntoView({ behavior: "smooth" });
-  };
+const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
 
+const FinalCTASection = () => {
   return (
     <section className="py-16 md:py-24 gradient-hero relative overflow-hidden">
       {/* Animated background */}
@@ -50,7 +48,12 @@ const FinalCTASection = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
             >
-              <Button variant="cta" size="xl" onClick={scrollToCTA} className="text-base md:text-lg px-6 md:px-12 w-full sm:w-auto">
+              <Button 
+                variant="cta" 
+                size="xl" 
+                onClick={() => window.open(ENROLLMENT_URL, "_blank")} 
+                className="text-base md:text-lg px-6 md:px-12 w-full sm:w-auto"
+              >
                 <Rocket className="w-5 h-5 md:w-6 md:h-6" />
                 <span className="hidden sm:inline">Inscreva-se agora no AcademIA Business</span>
                 <span className="sm:hidden">Inscreva-se agora</span>

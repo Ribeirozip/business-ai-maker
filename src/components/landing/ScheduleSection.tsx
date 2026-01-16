@@ -2,28 +2,26 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users, ArrowRight } from "lucide-react";
 
+const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
+
 const classes = [
   {
-    name: "Turma Semana",
+    name: "Turma 1",
     schedule: "Terça e Quinta",
-    time: "19h às 22h",
+    time: "19h às 21:30",
     icon: Calendar,
     description: "Ideal para quem prefere estudar durante a semana",
   },
   {
-    name: "Turma Sábado",
+    name: "Turma 2",
     schedule: "Sábado",
-    time: "14h às 18h",
+    time: "14h às 19h",
     icon: Calendar,
     description: "Perfeito para quem tem a semana mais ocupada",
   },
 ];
 
 const ScheduleSection = () => {
-  const scrollToCTA = () => {
-    document.getElementById("investimento")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="py-16 md:py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
@@ -89,7 +87,11 @@ const ScheduleSection = () => {
           transition={{ delay: 0.4 }}
           className="text-center"
         >
-          <Button variant="hero" size="lg" onClick={scrollToCTA}>
+          <Button 
+            variant="hero" 
+            size="lg" 
+            onClick={() => window.open(ENROLLMENT_URL, "_blank")}
+          >
             Escolher minha turma
             <ArrowRight className="w-4 h-4" />
           </Button>

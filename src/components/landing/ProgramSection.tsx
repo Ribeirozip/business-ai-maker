@@ -1,43 +1,61 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, Palette, BarChart3, Trophy, ArrowRight, Clock } from "lucide-react";
+import { Brain, Lightbulb, BarChart3, Rocket, ArrowRight, Clock, CheckCircle2 } from "lucide-react";
+
+const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
 
 const modules = [
   {
     number: "01",
-    icon: MessageSquare,
-    title: "Engenharia de Prompt & IA Generativa",
-    description: "Domine as técnicas de comunicação com IA e aplique modelos generativos aos seus processos de negócio.",
-    hours: "15h",
+    icon: Brain,
+    title: "IA para Produtividade e Negócios",
+    description: "Use Inteligência Artificial para ganhar tempo, aumentar produtividade e tomar decisões melhores no dia a dia da sua empresa.",
+    topics: [
+      "Usar IA em tarefas do dia a dia",
+      "Criar comandos eficientes para gerar resultados",
+      "Automatizar atividades repetitivas e intelectuais",
+      "Apoiar decisões estratégicas com IA",
+    ],
   },
   {
     number: "02",
-    icon: Palette,
-    title: "UX, Vibe e Design de Soluções com IA",
-    description: "Crie experiências inteligentes e soluções centradas no usuário utilizando ferramentas de IA.",
-    hours: "15h",
+    icon: Lightbulb,
+    title: "Designer de Soluções Inteligentes",
+    description: "Crie soluções digitais inteligentes e eficientes, mesmo sem ser programador ou designer.",
+    topics: [
+      "Criar soluções centradas no usuário",
+      "Estruturar fluxos inteligentes",
+      "Pensar produtos e serviços com IA",
+      "Melhorar experiências com tecnologia",
+    ],
   },
   {
     number: "03",
     icon: BarChart3,
-    title: "Análise de Dados & Automações",
-    description: "Transforme dados em insights acionáveis e automatize processos repetitivos da sua operação.",
-    hours: "15h",
+    title: "Analista de Dados e Automações",
+    description: "Transforme dados em informações claras para tomada de decisão e automatize processos do seu negócio.",
+    topics: [
+      "Interpretar dados do negócio",
+      "Criar análises simples e visuais",
+      "Automatizar tarefas manuais",
+      "Reduzir custos operacionais",
+    ],
   },
   {
     number: "04",
-    icon: Trophy,
-    title: "Desafio Final",
-    description: "Aplicação prática de tudo que aprendeu em um projeto real do seu negócio com mentoria.",
-    hours: "15h",
+    icon: Rocket,
+    title: "Projeto Aplicado a Negócios",
+    description: "Coloque todo o conhecimento em prática desenvolvendo um projeto real aplicado ao seu negócio, com orientação e mentoria.",
+    topics: [
+      "Uma solução prática usando IA e automação",
+      "Um projeto aplicável imediatamente",
+      "Um case real para o negócio ou carreira",
+    ],
+    isProject: true,
   },
 ];
 
 const ProgramSection = () => {
-  const scrollToCTA = () => {
-    document.getElementById("investimento")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section id="programa" className="py-16 md:py-24 gradient-hero relative overflow-hidden">
       {/* Background elements */}
@@ -59,7 +77,7 @@ const ProgramSection = () => {
             O que você vai <span className="text-gradient">aprender</span>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground">
-            Conteúdo prático, direto ao ponto, focado em aplicação no seu negócio.
+            Conteúdo prático, direto ao ponto, focado em aplicação real no seu negócio.
           </p>
         </motion.div>
 
@@ -81,17 +99,36 @@ const ProgramSection = () => {
                       <module.icon className="w-6 h-6 text-accent" />
                     </div>
                   </div>
-                  <div className="flex items-center gap-1 text-muted-foreground text-sm">
-                    <Clock className="w-4 h-4" />
-                    {module.hours}
-                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">{module.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{module.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{module.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{module.description}</p>
+                
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold text-secondary">
+                    {module.isProject ? "Você vai desenvolver:" : "Você vai aprender a:"}
+                  </p>
+                  {module.topics.map((topic, topicIndex) => (
+                    <div key={topicIndex} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-foreground/80">{topic}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Support text */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-center text-muted-foreground max-w-3xl mx-auto mb-8"
+        >
+          Ao final do AcademIA Business, você estará preparado para aplicar Inteligência Artificial e automações para aumentar produtividade, reduzir custos e tomar decisões melhores no seu negócio.
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -100,7 +137,11 @@ const ProgramSection = () => {
           transition={{ delay: 0.4 }}
           className="text-center"
         >
-          <Button variant="hero" size="lg" onClick={scrollToCTA}>
+          <Button 
+            variant="hero" 
+            size="lg" 
+            onClick={() => window.open(ENROLLMENT_URL, "_blank")}
+          >
             Ver conteúdo completo
             <ArrowRight className="w-4 h-4" />
           </Button>

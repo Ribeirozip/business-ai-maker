@@ -39,7 +39,7 @@ const ProgramSection = () => {
   };
 
   return (
-    <section id="programa" className="py-24 gradient-hero relative overflow-hidden">
+    <section id="programa" className="py-16 md:py-24 gradient-hero relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
@@ -52,18 +52,18 @@ const ProgramSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
         >
           <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Programa de 60 horas</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4">
             O que você vai <span className="text-gradient">aprender</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             Conteúdo prático, direto ao ponto, focado em aplicação no seu negócio.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto mb-10 md:mb-12">
           {modules.map((module, index) => (
             <motion.div
               key={index}

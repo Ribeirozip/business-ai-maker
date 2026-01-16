@@ -23,24 +23,24 @@ const AudienceSection = () => {
   };
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Para quem é o <span className="text-gradient">AcademIA Business</span>?
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             Um programa exclusivo para quem quer resultados reais.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto mb-10 md:mb-12">
           {/* For who */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -48,7 +48,7 @@ const AudienceSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="h-full gradient-card rounded-2xl p-8 border border-secondary/30 card-shadow">
+            <div className="h-full gradient-card rounded-2xl p-6 md:p-8 border border-secondary/30 card-shadow">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center">
                   <Check className="w-6 h-6 text-secondary" />
@@ -82,7 +82,7 @@ const AudienceSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="h-full bg-card/30 rounded-2xl p-8 border border-border/50">
+            <div className="h-full bg-card/30 rounded-2xl p-6 md:p-8 border border-border/50">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-destructive/10 rounded-xl flex items-center justify-center">
                   <X className="w-6 h-6 text-destructive/70" />

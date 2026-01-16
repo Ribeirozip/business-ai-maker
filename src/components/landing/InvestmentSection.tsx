@@ -4,10 +4,10 @@ import { Shield, CreditCard, CheckCircle2 } from "lucide-react";
 
 const InvestmentSection = () => {
   return (
-    <section id="investimento" className="py-24 bg-background relative overflow-hidden">
+    <section id="investimento" className="py-16 md:py-24 bg-background relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl" />
+        <div className="w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-secondary/10 rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -16,12 +16,12 @@ const InvestmentSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-12"
+          className="text-center max-w-3xl mx-auto mb-8 md:mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             <span className="text-gradient">Investimento</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             Um investimento que se paga com o ganho de eficiência.
           </p>
         </motion.div>

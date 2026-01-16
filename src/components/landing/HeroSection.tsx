@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Rocket, ChevronDown, Brain, Zap, BarChart3, Timer } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
+import logoCeuma from "@/assets/logo-ceuma.png";
+import logoOxygeni from "@/assets/logo-oxygeni.png";
 
 const HeroSection = () => {
   const scrollToProgram = () => {
@@ -42,7 +44,7 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Inteligência Artificial e Automação{" "}
               <span className="text-gradient">para quem decide.</span>
             </h1>
@@ -54,7 +56,7 @@ const HeroSection = () => {
             </p>
 
             {/* Bullets */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {[
                 { icon: Brain, text: "IA aplicada ao negócio real" },
                 { icon: Zap, text: "Automação de processos" },
@@ -81,16 +83,38 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
             >
-              <Button variant="hero" size="xl" onClick={scrollToCTA}>
+              <Button variant="hero" size="xl" onClick={scrollToCTA} className="w-full sm:w-auto">
                 <Rocket className="w-5 h-5" />
                 Garanta sua vaga agora
               </Button>
-              <Button variant="heroOutline" size="lg" onClick={scrollToProgram}>
+              <Button variant="heroOutline" size="lg" onClick={scrollToProgram} className="w-full sm:w-auto">
                 Ver programa completo
                 <ChevronDown className="w-4 h-4" />
               </Button>
+            </motion.div>
+
+            {/* Partner Logos */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 }}
+              className="flex flex-wrap items-center gap-6 pt-4"
+            >
+              <span className="text-xs text-muted-foreground">Uma iniciativa de:</span>
+              <div className="flex items-center gap-4 md:gap-6">
+                <img 
+                  src={logoCeuma}
+                  alt="Universidade Ceuma" 
+                  className="h-6 md:h-8 object-contain opacity-80"
+                />
+                <img 
+                  src={logoOxygeni}
+                  alt="Oxygeni HUB" 
+                  className="h-5 md:h-6 object-contain opacity-80"
+                />
+              </div>
             </motion.div>
           </motion.div>
 

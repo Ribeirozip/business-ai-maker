@@ -9,26 +9,26 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="sobre" className="py-24 gradient-hero relative overflow-hidden">
+    <section id="sobre" className="py-16 md:py-24 gradient-hero relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Left - Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex justify-center"
+            className="flex justify-center order-2 lg:order-1"
           >
             <div className="relative">
               <motion.img
                 src={logoCircular}
                 alt="AcademIA Business"
-                className="w-72 h-72 md:w-96 md:h-96 object-contain"
+                className="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 object-contain"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
               />
@@ -42,7 +42,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6 md:space-y-8 order-1 lg:order-2"
           >
             <div>
               <motion.span
@@ -53,7 +53,7 @@ const AboutSection = () => {
               >
                 Sobre o Programa
               </motion.span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4 md:mb-6">
                 O que é o <span className="text-gradient">AcademIA Business</span>?
               </h2>
             </div>

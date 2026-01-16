@@ -14,16 +14,22 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <div className="flex items-center gap-3">
-              <img src={logoIconSmall} alt="AcademIA Business" className="w-10 h-10" />
-              <span className="text-xl font-bold text-foreground">AcademIA Business</span>
-            </div>
+            <h3 className="text-xl font-bold text-primary">Academ.IA CEUMA</h3>
             <p className="text-muted-foreground text-sm max-w-xs">
-              Treinamento executivo em Inteligência Artificial e Automação aplicada a negócios.
+              O centro de treinamentos em Inteligência Artificial mais avançado do Maranhão.
             </p>
-            <div className="pt-2">
-              <span className="text-sm text-muted-foreground">Apoio:</span>
-              <p className="text-foreground font-medium">Oxygeni Hub</p>
+            <div className="flex items-center gap-4 pt-2">
+              <img 
+                src="https://www.ceuma.br/hubfs/raw_assets/public/CEUMA-THEME-2019/images/logo-ceuma.svg" 
+                alt="Universidade Ceuma" 
+                className="h-10 brightness-0 invert opacity-80"
+              />
+              <img 
+                src={logoIconSmall} 
+                alt="Oxygeni HUB" 
+                className="h-10"
+              />
+              <span className="text-sm font-semibold text-foreground">OXYGENI<span className="text-primary">HUB</span></span>
             </div>
           </motion.div>
 
@@ -37,22 +43,25 @@ const Footer = () => {
           >
             <h4 className="font-semibold text-foreground">Contato</h4>
             <div className="space-y-3">
-              <a href="mailto:contato@academiabusiness.com.br" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
-                <Mail className="w-4 h-4" />
-                contato@academiabusiness.com.br
-              </a>
-              <a href="tel:+5511999999999" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
+              <a href="tel:+5598984136891" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
                 <Phone className="w-4 h-4" />
-                (11) 99999-9999
+                (98) 98413-6891
+              </a>
+              <a href="mailto:contato@oxygeni.com.br" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
+                <Mail className="w-4 h-4" />
+                contato@oxygeni.com.br
               </a>
               <div className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5" />
-                <span>São Paulo, SP - Brasil</span>
+                <div>
+                  <p>Oxygeni HUB - Universidade Ceuma</p>
+                  <p>São Luís, Maranhão</p>
+                </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Social */}
+          {/* Institucional */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,16 +69,33 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
             className="space-y-4"
           >
-            <h4 className="font-semibold text-foreground">Redes Sociais</h4>
-            <div className="flex gap-4">
+            <h4 className="font-semibold text-foreground">Institucional</h4>
+            <div className="space-y-3">
+              <a href="#" className="block text-muted-foreground hover:text-accent transition-colors">
+                Política de Privacidade
+              </a>
+              <a href="https://www.ceuma.br" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-accent transition-colors">
+                Universidade Ceuma
+              </a>
+              <a href="https://www.linkedin.com/company/oxygenihub" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-accent transition-colors">
+                Oxygeni HUB
+              </a>
+            </div>
+            
+            {/* Social Icons */}
+            <div className="flex gap-4 pt-2">
               <a
-                href="#"
+                href="https://www.instagram.com/oxygenihub/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-card rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent hover:bg-secondary/20 transition-all"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/oxygenihub"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-card rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent hover:bg-secondary/20 transition-all"
               >
                 <Linkedin className="w-5 h-5" />
@@ -79,18 +105,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-border/50 flex flex-col items-center gap-2 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 AcademIA Business. Todos os direitos reservados.
+            © 2026 Academ.IA CEUMA - Todos os direitos reservados
           </p>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
-              Política de Privacidade
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
-              Termos de Uso
-            </a>
-          </div>
+          <p className="text-sm text-muted-foreground">
+            Uma iniciativa do <a href="https://www.linkedin.com/company/oxygenihub" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Oxygeni HUB</a> - <a href="https://www.ceuma.br" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Universidade Ceuma</a>
+          </p>
         </div>
       </div>
     </footer>

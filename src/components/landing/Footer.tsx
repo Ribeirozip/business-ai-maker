@@ -43,14 +43,14 @@ const Footer = () => {
                 <img 
                   src={logoCeuma}
                   alt="Universidade Ceuma" 
-                  className="h-8 md:h-10 object-contain opacity-90 hover:opacity-100 transition-opacity"
+                  className="h-12 md:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity"
                 />
               </a>
               <a href="https://www.linkedin.com/company/oxygenihub" target="_blank" rel="noopener noreferrer" className="block">
                 <img 
                   src={logoOxygeni}
                   alt="Oxygeni HUB" 
-                  className="h-6 md:h-8 object-contain opacity-90 hover:opacity-100 transition-opacity"
+                  className="h-10 md:h-12 object-contain opacity-90 hover:opacity-100 transition-opacity"
                 />
               </a>
             </div>
@@ -130,16 +130,16 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-border/50 flex flex-col items-center gap-4 text-center">
           {/* Partner logos horizontal */}
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10">
             <img 
               src={logoCeuma}
               alt="Universidade Ceuma" 
-              className="h-6 md:h-8 object-contain opacity-70"
+              className="h-10 md:h-12 object-contain opacity-70"
             />
             <img 
               src={logoOxygeni}
               alt="Oxygeni HUB" 
-              className="h-5 md:h-6 object-contain opacity-70"
+              className="h-8 md:h-10 object-contain opacity-70"
             />
           </div>
           

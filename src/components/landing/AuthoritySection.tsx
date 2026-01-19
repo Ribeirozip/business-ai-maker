@@ -100,7 +100,7 @@ const AuthoritySection = () => {
               <img 
                 src={logoCeuma}
                 alt="Universidade Ceuma" 
-                className="h-10 md:h-14 object-contain"
+                className="h-14 md:h-20 object-contain"
               />
             </a>
             <a 
@@ -112,7 +112,7 @@ const AuthoritySection = () => {
               <img 
                 src={logoOxygeni}
                 alt="Oxygeni HUB" 
-                className="h-8 md:h-10 object-contain"
+                className="h-10 md:h-14 object-contain"
               />
             </a>
           </div>

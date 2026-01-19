@@ -60,7 +60,7 @@ const AboutSection = () => {
 
             <div className="space-y-4">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Não é um curso técnico.</strong> É um treinamento estratégico para aplicar IA e automação diretamente no seu negócio.
+                É um treinamento estratégico para aplicar IA e automação diretamente no seu negócio.
               </p>
               
               <div className="grid gap-4">

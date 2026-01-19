@@ -105,16 +105,16 @@ const HeroSection = () => {
               className="flex flex-wrap items-center gap-6 pt-4"
             >
               <span className="text-xs text-muted-foreground">Uma iniciativa de:</span>
-              <div className="flex items-center gap-4 md:gap-6">
+              <div className="flex items-center gap-4 md:gap-8">
                 <img 
                   src={logoCeuma}
                   alt="Universidade Ceuma" 
-                  className="h-6 md:h-8 object-contain opacity-80"
+                  className="h-10 md:h-14 object-contain opacity-80"
                 />
                 <img 
                   src={logoOxygeni}
                   alt="Oxygeni HUB" 
-                  className="h-5 md:h-6 object-contain opacity-80"
+                  className="h-8 md:h-10 object-contain opacity-80"
                 />
               </div>
             </motion.div>

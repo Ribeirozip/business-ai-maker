@@ -20,7 +20,7 @@ const modules = [
   {
     number: "02",
     icon: Lightbulb,
-    title: "Designer de Soluções Inteligentes",
+    title: "Design de Soluções Inteligentes",
     description: "Crie soluções digitais inteligentes e eficientes, mesmo sem ser programador ou designer.",
     topics: [
       "Criar soluções centradas no usuário",
@@ -32,7 +32,7 @@ const modules = [
   {
     number: "03",
     icon: BarChart3,
-    title: "Analista de Dados e Automações",
+    title: "Análise de Dados e Automações",
     description: "Transforme dados em informações claras para tomada de decisão e automatize processos do seu negócio.",
     topics: [
       "Interpretar dados do negócio",

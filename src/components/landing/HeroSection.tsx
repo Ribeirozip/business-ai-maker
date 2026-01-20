@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Rocket, ChevronDown, Brain, Zap, BarChart3, Timer } from "lucide-react";
+import { Rocket, ChevronDown, Brain, Zap, BarChart3, Timer, MousePointer2 } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 import logoCeuma from "@/assets/logo-ceuma.png";
 import logoOxygeni from "@/assets/logo-oxygeni.png";
@@ -30,26 +30,31 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-8"
           >
-            {/* Badge */}
+            {/* Badge - Institutional positioning */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2"
+              className="inline-flex flex-col gap-2"
             >
-              <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-              <span className="text-sm text-muted-foreground">Turmas com vagas limitadas</span>
+              <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2 w-fit">
+                <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
+                <span className="text-sm text-muted-foreground">Turmas com vagas limitadas</span>
+              </div>
+              <span className="text-xs md:text-sm text-secondary font-medium">
+                O maior e mais avançado centro de formação em Inteligência Artificial do Maranhão
+              </span>
             </motion.div>
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Inteligência Artificial e Automação{" "}
-              <span className="text-gradient">para quem decide.</span>
+              IA aplicada ao{" "}
+              <span className="text-gradient">seu negócio</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              <strong className="text-accent">Aprenda IA com quem faz.</strong> Um treinamento executivo prático para gestores e empresários aplicarem IA no negócio e ganharem eficiência, escala e vantagem competitiva.
+              Aprenda Inteligência Artificial e automação de forma prática para resolver problemas reais do dia a dia da sua empresa.
             </p>
 
             {/* Bullets */}
@@ -89,7 +94,7 @@ const HeroSection = () => {
                 className="w-full sm:w-auto"
               >
                 <Rocket className="w-5 h-5" />
-                Garanta sua vaga agora
+                Garanta sua vaga
               </Button>
               <Button variant="heroOutline" size="lg" onClick={scrollToProgram} className="w-full sm:w-auto">
                 Ver programa completo
@@ -161,20 +166,22 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator with arrow */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center pt-2"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="flex flex-col items-center"
         >
-          <div className="w-1.5 h-3 bg-accent rounded-full" />
+          <MousePointer2 className="w-5 h-5 text-muted-foreground mb-1" />
+          <ChevronDown className="w-6 h-6 text-accent" />
         </motion.div>
+        <span className="text-xs text-muted-foreground">Role para baixo</span>
       </motion.div>
     </section>
   );

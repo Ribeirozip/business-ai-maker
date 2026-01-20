@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Shield, CreditCard, CheckCircle2, Calendar } from "lucide-react";
+import { Shield, CreditCard, CheckCircle2, Calendar, Rocket } from "lucide-react";
 
 const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
 
@@ -53,10 +53,16 @@ const InvestmentSection = () => {
                 <p className="text-muted-foreground">no cartão de crédito</p>
               </div>
 
-              {/* Class start date */}
-              <div className="flex items-center justify-center gap-2 mb-6 p-3 bg-accent/10 rounded-xl">
-                <Calendar className="w-5 h-5 text-accent" />
-                <span className="text-foreground font-medium">Início das aulas: 28/02</span>
+              {/* Class start dates */}
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center justify-center gap-2 p-3 bg-accent/10 rounded-xl">
+                  <Calendar className="w-5 h-5 text-accent" />
+                  <span className="text-foreground font-medium">Turma 1 — Início: 28/02</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 p-3 bg-secondary/10 rounded-xl">
+                  <Calendar className="w-5 h-5 text-secondary" />
+                  <span className="text-foreground font-medium">Turma 2 — Início: 01/03</span>
+                </div>
               </div>
 
               {/* What's included */}
@@ -89,8 +95,8 @@ const InvestmentSection = () => {
                 className="w-full"
                 onClick={() => window.open(ENROLLMENT_URL, "_blank")}
               >
-                <Shield className="w-5 h-5" />
-                Garantir minha vaga agora
+                <Rocket className="w-5 h-5" />
+                Garanta sua vaga
               </Button>
 
               {/* Trust badges */}

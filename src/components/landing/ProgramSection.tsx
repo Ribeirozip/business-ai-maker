@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Brain, Lightbulb, BarChart3, Rocket, ArrowRight, Clock, CheckCircle2 } from "lucide-react";
+import { Brain, Lightbulb, BarChart3, Rocket, ArrowRight, CheckCircle2 } from "lucide-react";
 
 const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
 
@@ -8,48 +8,52 @@ const modules = [
   {
     number: "01",
     icon: Brain,
-    title: "IA para Produtividade e Negócios",
-    description: "Use Inteligência Artificial para ganhar tempo, aumentar produtividade e tomar decisões melhores no dia a dia da sua empresa.",
+    title: "Automatizar tarefas manuais do dia a dia",
+    description: "Aprenda a usar IA para eliminar tarefas repetitivas e ganhar horas na sua rotina.",
+    benefit: "Você vai parar de perder tempo com o operacional e focar no que realmente importa.",
     topics: [
       "Usar IA em tarefas do dia a dia",
-      "Criar comandos eficientes para gerar resultados",
-      "Automatizar atividades repetitivas e intelectuais",
-      "Apoiar decisões estratégicas com IA",
+      "Criar comandos simples que geram resultados",
+      "Automatizar atividades manuais e repetitivas",
+      "Ganhar tempo para o que realmente importa",
     ],
   },
   {
     number: "02",
     icon: Lightbulb,
-    title: "Design de Soluções Inteligentes",
-    description: "Crie soluções digitais inteligentes e eficientes, mesmo sem ser programador ou designer.",
+    title: "Usar IA para entender melhor o cliente",
+    description: "Descubra como a IA pode ajudar você a conhecer melhor seus clientes e tomar decisões mais certeiras.",
+    benefit: "Você vai entender o que seu cliente quer, antes mesmo dele pedir.",
     topics: [
-      "Criar soluções centradas no usuário",
-      "Estruturar fluxos inteligentes",
+      "Criar soluções centradas no cliente",
+      "Estruturar fluxos inteligentes de atendimento",
       "Pensar produtos e serviços com IA",
-      "Melhorar experiências com tecnologia",
+      "Melhorar a experiência do cliente",
     ],
   },
   {
     number: "03",
     icon: BarChart3,
-    title: "Análise de Dados e Automações",
-    description: "Transforme dados em informações claras para tomada de decisão e automatize processos do seu negócio.",
+    title: "Criar gráficos simples e visuais para decisões rápidas",
+    description: "Transforme dados em gráficos simples e visuais que qualquer pessoa entende.",
+    benefit: "Você vai tomar decisões mais rápidas olhando para informações claras, não planilhas confusas.",
     topics: [
-      "Interpretar dados do negócio",
-      "Criar análises simples e visuais",
-      "Automatizar tarefas manuais",
-      "Reduzir custos operacionais",
+      "Interpretar dados do seu negócio",
+      "Criar gráficos simples e visuais",
+      "Automatizar relatórios",
+      "Tomar decisões baseadas em dados",
     ],
   },
   {
     number: "04",
     icon: Rocket,
-    title: "Projeto Aplicado a Negócios",
-    description: "Coloque todo o conhecimento em prática desenvolvendo um projeto real aplicado ao seu negócio, com orientação e mentoria.",
+    title: "Criar um case real aplicado ao seu negócio",
+    description: "Coloque tudo em prática e saia do curso com um projeto funcionando na sua empresa.",
+    benefit: "Você não vai aprender por teoria. Vai usar IA para resolver problemas reais do seu negócio.",
     topics: [
       "Uma solução prática usando IA e automação",
       "Um projeto aplicável imediatamente",
-      "Um case real para o negócio ou carreira",
+      "Um case real para o seu negócio",
     ],
     isProject: true,
   },
@@ -72,12 +76,12 @@ const ProgramSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
         >
-          <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Programa de 60 horas</span>
+          <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Curso de 60 horas</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4">
-            O que você vai <span className="text-gradient">aprender</span>
+            O que você vai <span className="text-gradient">conseguir fazer</span>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground">
-            Conteúdo prático, direto ao ponto, focado em aplicação real no seu negócio.
+            Casos práticos que você vai resolver durante o curso. Linguagem simples, resultado direto.
           </p>
         </motion.div>
 
@@ -99,9 +103,17 @@ const ProgramSection = () => {
                       <module.icon className="w-6 h-6 text-accent" />
                     </div>
                   </div>
+                  <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded-full">
+                    {module.isProject ? "Projeto Final" : `Caso ${module.number}`}
+                  </span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">{module.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{module.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3">{module.description}</p>
+                
+                {/* Benefit highlight */}
+                <div className="bg-secondary/10 rounded-lg p-3 mb-4">
+                  <p className="text-sm text-accent font-medium">{module.benefit}</p>
+                </div>
                 
                 <div className="space-y-2">
                   <p className="text-sm font-semibold text-secondary">
@@ -127,7 +139,7 @@ const ProgramSection = () => {
           transition={{ delay: 0.3 }}
           className="text-center text-muted-foreground max-w-3xl mx-auto mb-8"
         >
-          Ao final do AcademIA Business, você estará preparado para aplicar Inteligência Artificial e automações para aumentar produtividade, reduzir custos e tomar decisões melhores no seu negócio.
+          Você não vai aprender IA por teoria. Vai usar IA para resolver problemas reais do seu negócio.
         </motion.p>
 
         <motion.div
@@ -142,7 +154,8 @@ const ProgramSection = () => {
             size="lg" 
             onClick={() => window.open(ENROLLMENT_URL, "_blank")}
           >
-            Ver conteúdo completo
+            <Rocket className="w-5 h-5" />
+            Garanta sua vaga
             <ArrowRight className="w-4 h-4" />
           </Button>
         </motion.div>

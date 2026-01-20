@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Settings, Timer, Rocket, Users2, ArrowRight } from "lucide-react";
+import { TrendingUp, Settings, Timer, Rocket, Users2, ArrowRight, AlertTriangle } from "lucide-react";
 
 const benefits = [
   {
@@ -17,6 +17,11 @@ const benefits = [
     icon: Timer,
     title: "Decisão mais rápida",
     description: "Dados organizados para escolhas certeiras.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Decisões imediatas críticas",
+    description: "Aprenda a tomar decisões rápidas e estratégicas com apoio de dados e IA.",
   },
   {
     icon: Rocket,
@@ -64,7 +69,7 @@ const BenefitsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group ${index === benefits.length - 1 ? "lg:col-start-2" : ""}`}
+              className="group"
             >
               <div className="h-full bg-card/30 backdrop-blur-sm rounded-2xl p-6 border border-border/50 hover:border-secondary/40 transition-all duration-300 hover:-translate-y-1">
                 <div className="w-14 h-14 bg-gradient-to-br from-secondary/30 to-accent/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -77,6 +82,7 @@ const BenefitsSection = () => {
           ))}
         </div>
 
+        {/* CTA before investment section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +91,8 @@ const BenefitsSection = () => {
           className="text-center"
         >
           <Button variant="hero" size="lg" onClick={scrollToCTA}>
-            Quero esses resultados
+            <Rocket className="w-5 h-5" />
+            Garanta sua vaga
             <ArrowRight className="w-4 h-4" />
           </Button>
         </motion.div>

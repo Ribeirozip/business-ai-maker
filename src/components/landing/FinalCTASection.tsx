@@ -55,8 +55,8 @@ const FinalCTASection = () => {
                 className="text-base md:text-lg px-6 md:px-12 w-full sm:w-auto"
               >
                 <Rocket className="w-5 h-5 md:w-6 md:h-6" />
-                <span className="hidden sm:inline">Inscreva-se agora no AcademIA Business</span>
-                <span className="sm:hidden">Inscreva-se agora</span>
+                <span className="hidden sm:inline">Garanta sua vaga no AcademIA Business</span>
+                <span className="sm:hidden">Garanta sua vaga</span>
               </Button>
             </motion.div>
           </div>

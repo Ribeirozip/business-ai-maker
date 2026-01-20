@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Users, ArrowRight } from "lucide-react";
+import { Calendar, Clock, Users, ArrowRight, Rocket } from "lucide-react";
 
 const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
 
@@ -11,13 +11,15 @@ const classes = [
     time: "19h às 21:30",
     icon: Calendar,
     description: "Ideal para quem prefere estudar durante a semana",
+    startDate: "28/02",
   },
   {
     name: "Turma 2",
     schedule: "Sábado",
     time: "14h às 19h",
     icon: Calendar,
-    description: "Perfeito para quem tem a semana mais ocupada",
+    description: "Perfeito para quem não consegue estudar na semana",
+    startDate: "01/03",
   },
 ];
 
@@ -36,7 +38,7 @@ const ScheduleSection = () => {
             Duas turmas. <span className="text-gradient">Você escolhe.</span>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground">
-            Flexibilidade para encaixar o treinamento na sua rotina.
+            Flexibilidade para encaixar o curso na sua rotina.
           </p>
         </motion.div>
 
@@ -73,6 +75,13 @@ const ScheduleSection = () => {
                     <span className="font-medium">{classOption.time}</span>
                   </div>
                 </div>
+
+                {/* Start date highlight */}
+                <div className="bg-accent/10 rounded-lg p-3 mb-4">
+                  <p className="text-sm text-accent font-medium">
+                    📅 Início: {classOption.startDate}
+                  </p>
+                </div>
                 
                 <p className="text-muted-foreground text-sm">{classOption.description}</p>
               </div>
@@ -92,7 +101,8 @@ const ScheduleSection = () => {
             size="lg" 
             onClick={() => window.open(ENROLLMENT_URL, "_blank")}
           >
-            Escolher minha turma
+            <Rocket className="w-5 h-5" />
+            Garanta sua vaga
             <ArrowRight className="w-4 h-4" />
           </Button>
         </motion.div>

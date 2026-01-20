@@ -51,7 +51,7 @@ const AboutSection = () => {
                 viewport={{ once: true }}
                 className="text-secondary font-semibold text-sm uppercase tracking-wider"
               >
-                Sobre o Programa
+                Sobre o Curso
               </motion.span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4 md:mb-6">
                 O que é o <span className="text-gradient">AcademIA Business</span>?
@@ -60,8 +60,15 @@ const AboutSection = () => {
 
             <div className="space-y-4">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                É um treinamento estratégico para aplicar IA e automação diretamente no seu negócio.
+                É um curso estratégico para aplicar IA e automação diretamente no seu negócio.
               </p>
+
+              {/* Ecosystem highlight */}
+              <div className="bg-secondary/10 rounded-xl p-4 border border-secondary/20">
+                <p className="text-foreground font-medium">
+                  📍 Dentro do Oxygeni Hub — mesmo ecossistema de inovação, tecnologia e negócios
+                </p>
+              </div>
               
               <div className="grid gap-4">
                 {[
@@ -108,7 +115,8 @@ const AboutSection = () => {
               transition={{ delay: 0.5 }}
             >
               <Button variant="hero" size="lg" onClick={scrollToCTA}>
-                Quero fazer parte da próxima turma
+                <Rocket className="w-5 h-5" />
+                Garanta sua vaga
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </motion.div>

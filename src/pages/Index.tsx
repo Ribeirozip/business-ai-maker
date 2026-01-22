@@ -7,7 +7,7 @@ import ScheduleSection from "@/components/landing/ScheduleSection";
 import BenefitsSection from "@/components/landing/BenefitsSection";
 import InvestmentSection from "@/components/landing/InvestmentSection";
 import InstructorsSection from "@/components/landing/InstructorsSection";
-import VideoSection from "@/components/landing/VideoSection";
+
 import AuthoritySection from "@/components/landing/AuthoritySection";
 import CommunitySection from "@/components/landing/CommunitySection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
@@ -25,7 +25,7 @@ const Index = () => {
       <BenefitsSection />
       <InvestmentSection />
       <InstructorsSection />
-      <VideoSection />
+      
       <AuthoritySection />
       <CommunitySection />
       <FinalCTASection />

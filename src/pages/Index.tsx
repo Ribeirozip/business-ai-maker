@@ -1,5 +1,4 @@
 import HeroSection from "@/components/landing/HeroSection";
-import ExclusiveSection from "@/components/landing/ExclusiveSection";
 import PainSection from "@/components/landing/PainSection";
 import AboutSection from "@/components/landing/AboutSection";
 import AudienceSection from "@/components/landing/AudienceSection";
@@ -18,7 +17,6 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <HeroSection />
-      <ExclusiveSection />
       <PainSection />
       <AboutSection />
       <AudienceSection />

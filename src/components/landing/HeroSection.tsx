@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Rocket, ChevronDown, Brain, Zap, BarChart3, Timer, MousePointer2, Crown } from "lucide-react";
+import { Rocket, ChevronDown, Brain, Zap, BarChart3, Timer, MousePointer2 } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 import logoCeuma from "@/assets/logo-ceuma.png";
 import logoOxygeni from "@/assets/logo-oxygeni.png";
@@ -35,19 +35,12 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex flex-col gap-3"
+              className="inline-flex flex-col gap-2"
             >
-              <motion.div 
-                className="inline-flex items-center gap-3 bg-[hsl(0_0%_5%)] border border-[hsl(45_100%_51%/0.5)] rounded-full px-5 py-2.5 w-fit shadow-[0_0_25px_-5px_hsl(45_100%_51%/0.3)]"
-                animate={{ boxShadow: ["0 0 20px -5px hsl(45 100% 51% / 0.2)", "0 0 35px -5px hsl(45 100% 51% / 0.45)", "0 0 20px -5px hsl(45 100% 51% / 0.2)"] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <Crown className="w-4 h-4 text-[hsl(45_100%_51%)]" />
-                <span className="text-sm font-semibold bg-gradient-to-r from-[hsl(45_100%_51%)] to-[hsl(35_100%_70%)] bg-clip-text text-transparent tracking-wide">
-                  Turmas exclusivas e personalizadas
-                </span>
-                <span className="w-2 h-2 bg-[hsl(45_100%_51%)] rounded-full animate-pulse" />
-              </motion.div>
+              <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2 w-fit">
+                <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
+                <span className="text-sm text-muted-foreground">Turmas com vagas limitadas</span>
+              </div>
               <span className="text-xs md:text-sm text-secondary font-medium">
                 O maior e mais avançado centro de formação em Inteligência Artificial do Maranhão
               </span>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Rocket, ChevronDown, Brain, Zap, BarChart3, Timer, MousePointer2 } from "lucide-react";
+import { Rocket, ChevronDown, Brain, Zap, BarChart3, Timer, MousePointer2, Crown, MessageCircle } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 import logoCeuma from "@/assets/logo-ceuma.png";
 import logoOxygeni from "@/assets/logo-oxygeni.png";
@@ -101,6 +101,31 @@ const HeroSection = () => {
                 <ChevronDown className="w-4 h-4" />
               </Button>
             </motion.div>
+
+            {/* Exclusive/Personalized - WhatsApp CTA */}
+            <motion.a
+              href="https://wa.me/5598991234567?text=Olá! Tenho interesse em turmas exclusivas e personalizadas para minha empresa."
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 }}
+              whileHover={{ scale: 1.02 }}
+              className="group flex items-center gap-3 bg-[hsl(0_0%_5%)] border border-[hsl(var(--gold))] rounded-xl px-5 py-3 w-fit cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--gold)/0.3)]"
+            >
+              <div className="p-1.5 bg-[hsl(var(--gold)/0.15)] rounded-lg">
+                <Crown className="w-4 h-4 text-[hsl(var(--gold))]" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xs font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(45_80%_60%)] bg-clip-text text-transparent">
+                  Turmas exclusivas para sua empresa
+                </span>
+                <span className="text-[10px] text-muted-foreground">
+                  Treinamentos personalizados sob medida
+                </span>
+              </div>
+              <MessageCircle className="w-4 h-4 text-[hsl(var(--gold))] opacity-60 group-hover:opacity-100 transition-opacity" />
+            </motion.a>
 
             {/* Partner Logos */}
             <motion.div

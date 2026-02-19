@@ -5,6 +5,7 @@ import AudienceSection from "@/components/landing/AudienceSection";
 import ProgramSection from "@/components/landing/ProgramSection";
 import ScheduleSection from "@/components/landing/ScheduleSection";
 import BenefitsSection from "@/components/landing/BenefitsSection";
+import LeadFormSection from "@/components/landing/LeadFormSection";
 import InvestmentSection from "@/components/landing/InvestmentSection";
 import InstructorsSection from "@/components/landing/InstructorsSection";
 import VideoSection from "@/components/landing/VideoSection";
@@ -23,6 +24,7 @@ const Index = () => {
       <ProgramSection />
       <ScheduleSection />
       <BenefitsSection />
+      <LeadFormSection />
       <InvestmentSection />
       <InstructorsSection />
       <VideoSection />

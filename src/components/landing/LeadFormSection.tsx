@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Sparkles } from "lucide-react";
+import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -52,20 +52,10 @@ const LeadFormSection = () => {
   };
 
   const inputClasses =
-    "w-full bg-background/60 border border-secondary/30 rounded-lg px-4 py-3.5 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-secondary/60 focus:border-secondary transition-all duration-300";
+    "w-full bg-white/10 border-none rounded-lg px-4 py-3.5 text-foreground placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 transition-colors";
 
   return (
-    <section className="relative py-24 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-background" />
-      
-      {/* Multiple glow effects for vibrancy */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-30"
-        style={{ background: "radial-gradient(ellipse at center, hsl(var(--secondary) / 0.4) 0%, hsl(var(--primary) / 0.2) 40%, transparent 70%)" }}
-      />
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-60" />
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-60" />
-
+    <section className="relative py-24 bg-secondary">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -74,26 +64,17 @@ const LeadFormSection = () => {
           transition={{ duration: 0.6 }}
           className="max-w-lg mx-auto"
         >
-          {/* Badge */}
-          <div className="flex justify-center mb-6">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-secondary/15 text-accent border border-secondary/30">
-              <Sparkles className="w-3.5 h-3.5" />
-              Vagas limitadas
-            </span>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground text-center mb-3">
-            Garanta a sua <span className="text-gradient">vaga</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-3">
+            Garanta a sua vaga
           </h2>
-          <p className="text-muted-foreground text-center mb-10">
+          <p className="text-white/70 text-center mb-10">
             Preencha o formulário e entraremos em contato
           </p>
 
-          {/* Card with glow border */}
-          <div className="relative rounded-2xl p-8 backdrop-blur-sm bg-card/80 border border-secondary/25 shadow-[0_0_60px_-15px_hsl(var(--secondary)/0.35)]">
-            <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="rounded-2xl bg-white/10 p-8">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-accent uppercase tracking-wider mb-2">
+                <label className="block text-xs font-semibold text-white/80 uppercase tracking-wider mb-2">
                   Nome completo
                 </label>
                 <input
@@ -108,7 +89,7 @@ const LeadFormSection = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-accent uppercase tracking-wider mb-2">
+                <label className="block text-xs font-semibold text-white/80 uppercase tracking-wider mb-2">
                   E-mail
                 </label>
                 <input
@@ -123,7 +104,7 @@ const LeadFormSection = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-accent uppercase tracking-wider mb-2">
+                <label className="block text-xs font-semibold text-white/80 uppercase tracking-wider mb-2">
                   Telefone / WhatsApp
                 </label>
                 <input
@@ -138,7 +119,7 @@ const LeadFormSection = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-accent uppercase tracking-wider mb-2">
+                <label className="block text-xs font-semibold text-white/80 uppercase tracking-wider mb-2">
                   Turma de interesse
                 </label>
                 <select
@@ -148,21 +129,21 @@ const LeadFormSection = () => {
                   className={`${inputClasses} appearance-none cursor-pointer`}
                   style={{
                     backgroundImage:
-                      "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ACC6FF' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E\")",
+                      "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E\")",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "right 16px center",
                   }}
                 >
-                  <option value="" disabled className="bg-card text-foreground">
+                  <option value="" disabled className="bg-primary text-white">
                     Selecione uma turma
                   </option>
-                  <option value="turma1" className="bg-card text-foreground">
+                  <option value="turma1" className="bg-primary text-white">
                     Turma 1 — Terça e Quinta
                   </option>
-                  <option value="turma2" className="bg-card text-foreground">
+                  <option value="turma2" className="bg-primary text-white">
                     Turma 2 — Sábado
                   </option>
-                  <option value="exclusivas" className="bg-card text-foreground">
+                  <option value="exclusivas" className="bg-primary text-white">
                     Turmas Exclusivas
                   </option>
                 </select>
@@ -170,9 +151,8 @@ const LeadFormSection = () => {
 
               <Button
                 type="submit"
-                variant="cta"
                 disabled={loading}
-                className="w-full h-14 text-base rounded-xl mt-2"
+                className="w-full h-14 text-base font-bold rounded-xl mt-2 bg-white text-primary hover:bg-white/90"
               >
                 Garantir minha vaga
                 <Send className="w-4 h-4 ml-2" />

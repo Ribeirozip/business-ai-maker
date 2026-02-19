@@ -52,17 +52,19 @@ const LeadFormSection = () => {
   };
 
   const inputClasses =
-    "w-full bg-muted/30 border border-border rounded-lg px-4 py-3.5 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-ring/50 focus:border-secondary transition-all duration-300";
+    "w-full bg-background/60 border border-secondary/30 rounded-lg px-4 py-3.5 text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-secondary/60 focus:border-secondary transition-all duration-300";
 
   return (
     <section className="relative py-24 overflow-hidden">
-      {/* Background matching site gradient */}
-      <div className="absolute inset-0 gradient-hero" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-background" />
       
-      {/* Glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20"
-        style={{ background: "var(--gradient-glow)" }}
+      {/* Multiple glow effects for vibrancy */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-30"
+        style={{ background: "radial-gradient(ellipse at center, hsl(var(--secondary) / 0.4) 0%, hsl(var(--primary) / 0.2) 40%, transparent 70%)" }}
       />
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-60" />
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-60" />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -80,15 +82,15 @@ const LeadFormSection = () => {
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-2">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground text-center mb-3">
             Garanta a sua <span className="text-gradient">vaga</span>
           </h2>
-          <p className="text-muted-foreground text-center mb-10 text-sm">
+          <p className="text-muted-foreground text-center mb-10">
             Preencha o formulário e entraremos em contato
           </p>
 
-          {/* Card with border-gradient style */}
-          <div className="border-gradient rounded-2xl p-8 card-shadow backdrop-blur-sm">
+          {/* Card with glow border */}
+          <div className="relative rounded-2xl p-8 backdrop-blur-sm bg-card/80 border border-secondary/25 shadow-[0_0_60px_-15px_hsl(var(--secondary)/0.35)]">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-xs font-semibold text-accent uppercase tracking-wider mb-2">

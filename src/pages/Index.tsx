@@ -4,7 +4,7 @@ import PainSection from "@/components/landing/PainSection";
 import AboutSection from "@/components/landing/AboutSection";
 import AudienceSection from "@/components/landing/AudienceSection";
 import ProgramSection from "@/components/landing/ProgramSection";
-import ScheduleSection from "@/components/landing/ScheduleSection";
+
 import BenefitsSection from "@/components/landing/BenefitsSection";
 import LeadFormSection from "@/components/landing/LeadFormSection";
 import InvestmentSection from "@/components/landing/InvestmentSection";

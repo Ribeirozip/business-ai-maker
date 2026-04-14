@@ -129,25 +129,6 @@ const ProgramSection = () => {
                   ))}
                 </div>
 
-                {/* Price + CTA */}
-                <div className="border-t border-border/40 pt-5">
-                  <div className="flex items-end justify-between mb-4">
-                    <div>
-                      <p className="text-xs text-muted-foreground mb-1">Investimento</p>
-                      <p className="text-2xl font-bold text-foreground">
-                        6x <span className="text-gradient">R$ 279</span>
-                      </p>
-                    </div>
-                  </div>
-                  <Button 
-                    size="lg"
-                    onClick={() => window.open(`${WHATSAPP_URL} "${module.title}" do AcademIA Business.`, "_blank")}
-                    className="w-full bg-secondary text-foreground hover:bg-secondary/90 font-semibold"
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    Quero este módulo
-                  </Button>
-                </div>
               </div>
             </motion.div>
           ))}

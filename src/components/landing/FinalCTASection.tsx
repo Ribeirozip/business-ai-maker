@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Rocket } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
-const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
+const WHATSAPP_URL = "https://wa.me/5598991234567?text=Olá! Tenho interesse nos módulos do AcademIA Business.";
 
 const FinalCTASection = () => {
   return (
-    <section className="py-16 md:py-24 gradient-hero relative overflow-hidden">
-      {/* Animated background */}
+    <section className="py-20 md:py-28 gradient-hero relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-secondary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-secondary/8 rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -20,13 +19,13 @@ const FinalCTASection = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-gradient-to-br from-card to-card/50 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 border border-secondary/30 text-center glow-effect">
+          <div className="border-premium rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 text-center premium-shadow">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 font-display"
             >
               Enquanto você decide,{" "}
               <span className="text-gradient">seu concorrente automatiza.</span>
@@ -49,14 +48,13 @@ const FinalCTASection = () => {
               transition={{ delay: 0.4 }}
             >
               <Button 
-                variant="cta" 
                 size="xl" 
-                onClick={() => window.open(ENROLLMENT_URL, "_blank")} 
-                className="text-base md:text-lg px-6 md:px-12 w-full sm:w-auto"
+                onClick={() => window.open(WHATSAPP_URL, "_blank")} 
+                className="bg-secondary text-foreground hover:bg-secondary/90 font-bold text-base md:text-lg px-6 md:px-12 w-full sm:w-auto"
               >
-                <Rocket className="w-5 h-5 md:w-6 md:h-6" />
-                <span className="hidden sm:inline">Garanta sua vaga no AcademIA Business</span>
-                <span className="sm:hidden">Garanta sua vaga</span>
+                <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
+                <span className="hidden sm:inline">Fale com um consultor agora</span>
+                <span className="sm:hidden">Fale conosco</span>
               </Button>
             </motion.div>
           </div>

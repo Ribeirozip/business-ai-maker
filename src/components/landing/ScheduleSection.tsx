@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Users, ArrowRight, Rocket } from "lucide-react";
+import { Calendar, Clock, Users, MessageCircle } from "lucide-react";
 
-const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
+const WHATSAPP_URL = "https://wa.me/5598991234567?text=Olá! Tenho interesse em uma turma do AcademIA Business.";
 
 const classes = [
   {
     name: "Turma 1",
     schedule: "Terça e Quinta",
     time: "19h às 21:30",
-    icon: Calendar,
     description: "Ideal para quem prefere estudar durante a semana",
     startDate: "28/02",
   },
@@ -17,7 +16,6 @@ const classes = [
     name: "Turma 2",
     schedule: "Sábado",
     time: "14h às 19h",
-    icon: Calendar,
     description: "Perfeito para quem não consegue estudar na semana",
     startDate: "01/03",
   },
@@ -25,7 +23,9 @@ const classes = [
 
 const ScheduleSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-background relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 premium-line" />
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -34,7 +34,7 @@ const ScheduleSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-display">
             Duas turmas. <span className="text-gradient">Você escolhe.</span>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground">
@@ -52,14 +52,14 @@ const ScheduleSection = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="group"
             >
-              <div className="h-full gradient-card rounded-2xl p-8 border border-border/50 hover:border-secondary/50 transition-all duration-300 hover:-translate-y-2 card-shadow">
+              <div className="h-full border-premium rounded-2xl p-8 hover:shadow-[0_0_30px_-10px_hsl(var(--secondary)/0.15)] transition-all duration-300 hover:-translate-y-2">
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-14 h-14 bg-secondary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <classOption.icon className="w-7 h-7 text-accent" />
+                  <div className="w-14 h-14 bg-secondary/15 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Calendar className="w-7 h-7 text-accent" />
                   </div>
-                  <div className="flex items-center gap-1 px-3 py-1 bg-accent/10 rounded-full">
-                    <Users className="w-4 h-4 text-accent" />
-                    <span className="text-sm text-accent font-medium">Vagas limitadas</span>
+                  <div className="flex items-center gap-1 px-3 py-1 bg-secondary/10 rounded-full">
+                    <Users className="w-4 h-4 text-secondary" />
+                    <span className="text-sm text-secondary font-medium">Vagas limitadas</span>
                   </div>
                 </div>
                 
@@ -76,8 +76,7 @@ const ScheduleSection = () => {
                   </div>
                 </div>
 
-                {/* Start date highlight */}
-                <div className="bg-accent/10 rounded-lg p-3 mb-4">
+                <div className="bg-secondary/8 rounded-lg p-3 mb-4 border border-secondary/10">
                   <p className="text-sm text-accent font-medium">
                     📅 Início: {classOption.startDate}
                   </p>
@@ -97,13 +96,12 @@ const ScheduleSection = () => {
           className="text-center"
         >
           <Button 
-            variant="hero" 
             size="lg" 
-            onClick={() => window.open(ENROLLMENT_URL, "_blank")}
+            onClick={() => window.open(WHATSAPP_URL, "_blank")}
+            className="bg-secondary text-foreground hover:bg-secondary/90 font-semibold"
           >
-            <Rocket className="w-5 h-5" />
-            Garanta sua vaga
-            <ArrowRight className="w-4 h-4" />
+            <MessageCircle className="w-5 h-5" />
+            Garantir vaga na turma
           </Button>
         </motion.div>
       </div>

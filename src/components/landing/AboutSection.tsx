@@ -4,15 +4,14 @@ import { Quote, ArrowRight, Lightbulb, Target, Rocket } from "lucide-react";
 import logoCircular from "@/assets/logo-circular.png";
 
 const AboutSection = () => {
-  const scrollToCTA = () => {
-    document.getElementById("investimento")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToProgram = () => {
+    document.getElementById("programa")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section id="sobre" className="py-16 md:py-24 gradient-hero relative overflow-hidden">
-      {/* Background decorations */}
+    <section id="sobre" className="py-20 md:py-28 gradient-hero relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
@@ -45,15 +44,8 @@ const AboutSection = () => {
             className="space-y-6 md:space-y-8 order-1 lg:order-2"
           >
             <div>
-              <motion.span
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="text-secondary font-semibold text-sm uppercase tracking-wider"
-              >
-                Sobre o Curso
-              </motion.span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4 md:mb-6">
+              <span className="text-secondary font-semibold text-sm uppercase tracking-[0.2em]">Sobre o Curso</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 md:mb-6 font-display">
                 O que é o <span className="text-gradient">AcademIA Business</span>?
               </h2>
             </div>
@@ -63,8 +55,7 @@ const AboutSection = () => {
                 É um curso estratégico para aplicar IA e automação diretamente no seu negócio.
               </p>
 
-              {/* Ecosystem highlight */}
-              <div className="bg-secondary/10 rounded-xl p-4 border border-secondary/20">
+              <div className="bg-secondary/10 rounded-xl p-4 border border-secondary/15">
                 <p className="text-foreground font-medium">
                   📍 Dentro do Oxygeni Hub — mesmo ecossistema de inovação, tecnologia e negócios
                 </p>
@@ -84,7 +75,7 @@ const AboutSection = () => {
                     transition={{ delay: 0.2 + index * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <div className="p-2 bg-secondary/20 rounded-lg">
+                    <div className="p-2 bg-secondary/15 rounded-lg">
                       <item.icon className="w-5 h-5 text-accent" />
                     </div>
                     <span className="text-foreground">{item.text}</span>
@@ -99,7 +90,7 @@ const AboutSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="relative bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6"
+              className="relative border-premium rounded-2xl p-6"
             >
               <Quote className="absolute -top-3 -left-3 w-8 h-8 text-secondary" />
               <p className="text-lg md:text-xl font-medium text-foreground italic pl-4">
@@ -114,9 +105,9 @@ const AboutSection = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
             >
-              <Button variant="hero" size="lg" onClick={scrollToCTA}>
+              <Button variant="hero" size="lg" onClick={scrollToProgram}>
                 <Rocket className="w-5 h-5" />
-                Garanta sua vaga
+                Ver módulos
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </motion.div>

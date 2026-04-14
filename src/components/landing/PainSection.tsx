@@ -26,13 +26,12 @@ const pains = [
 ];
 
 const PainSection = () => {
-  const scrollToCTA = () => {
-    document.getElementById("investimento")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToProgram = () => {
+    document.getElementById("programa")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
-      {/* Subtle background pattern */}
+    <section className="py-20 md:py-28 bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-card/50 via-background to-background" />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -43,7 +42,7 @@ const PainSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-display">
             O mercado já mudou.{" "}
             <span className="text-gradient">Sua empresa acompanhou?</span>
           </h2>
@@ -62,8 +61,8 @@ const PainSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="h-full p-6 gradient-card rounded-2xl border border-border/50 hover:border-secondary/50 transition-all duration-300 hover:-translate-y-1 card-shadow">
-                <div className="w-14 h-14 bg-destructive/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="h-full p-6 border-premium rounded-2xl hover:shadow-[0_0_30px_-10px_hsl(var(--secondary)/0.15)] transition-all duration-300 hover:-translate-y-1">
+                <div className="w-14 h-14 bg-destructive/15 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <pain.icon className="w-7 h-7 text-destructive" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-foreground">{pain.title}</h3>
@@ -80,7 +79,7 @@ const PainSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center"
         >
-          <Button variant="hero" size="lg" onClick={scrollToCTA}>
+          <Button variant="hero" size="lg" onClick={scrollToProgram}>
             Quero aplicar IA no meu negócio
             <ArrowRight className="w-4 h-4" />
           </Button>

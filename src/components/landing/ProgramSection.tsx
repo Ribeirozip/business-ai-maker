@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Brain, Lightbulb, BarChart3, Rocket, MessageCircle, CheckCircle2 } from "lucide-react";
-
-const WHATSAPP_URL = "https://wa.me/5598991234567?text=Olá! Tenho interesse no módulo";
+import { Brain, Lightbulb, BarChart3, Rocket, CheckCircle2 } from "lucide-react";
 
 const modules = [
   {

@@ -1,16 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Users, Briefcase, Award, ArrowRight, Rocket } from "lucide-react";
+import { Users, Briefcase, Award, MessageCircle } from "lucide-react";
 
-const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
+const WHATSAPP_URL = "https://wa.me/5598991234567?text=Olá! Tenho interesse nos módulos do AcademIA Business.";
 
 const InstructorsSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
-      {/* Background elements */}
+    <section className="py-20 md:py-28 bg-background relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -21,8 +20,8 @@ const InstructorsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Quem vai te ensinar</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+          <span className="text-secondary font-semibold text-sm uppercase tracking-[0.2em]">Quem vai te ensinar</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 mb-4 font-display">
             Aprenda com <span className="text-gradient">quem faz</span>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground">
@@ -56,8 +55,8 @@ const InstructorsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="h-full bg-card/30 backdrop-blur-sm rounded-2xl p-6 border border-border/50 hover:border-secondary/40 transition-all duration-300 hover:-translate-y-1 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-secondary/30 to-accent/20 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+              <div className="h-full border-premium rounded-2xl p-6 hover:shadow-[0_0_30px_-10px_hsl(var(--secondary)/0.15)] transition-all duration-300 hover:-translate-y-1 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary/20 to-primary/15 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-foreground">{item.title}</h3>
@@ -75,13 +74,12 @@ const InstructorsSection = () => {
           className="text-center"
         >
           <Button 
-            variant="hero" 
             size="lg" 
-            onClick={() => window.open(ENROLLMENT_URL, "_blank")}
+            onClick={() => window.open(WHATSAPP_URL, "_blank")}
+            className="bg-secondary text-foreground hover:bg-secondary/90 font-semibold"
           >
-            <Rocket className="w-5 h-5" />
-            Garanta sua vaga
-            <ArrowRight className="w-4 h-4" />
+            <MessageCircle className="w-5 h-5" />
+            Fale com um consultor
           </Button>
         </motion.div>
       </div>

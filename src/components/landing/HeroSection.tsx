@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Rocket, ChevronDown, Brain, Zap, BarChart3, Timer, MousePointer2, Crown, MessageCircle } from "lucide-react";
+import { ChevronDown, Brain, Zap, BarChart3, Timer, MousePointer2, Crown, MessageCircle } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 import logoCeuma from "@/assets/logo-ceuma.png";
 import logoOxygeni from "@/assets/logo-oxygeni.png";
 
-const ENROLLMENT_URL = "https://portal.apprbs.com.br/academ-ia/passo/246686";
+const WHATSAPP_URL = "https://wa.me/5598991234567?text=Olá! Tenho interesse nos módulos do AcademIA Business.";
 
 const HeroSection = () => {
   const scrollToProgram = () => {
@@ -13,11 +13,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen gradient-hero overflow-hidden flex items-center">
+    <section id="inicio" className="relative min-h-screen gradient-hero overflow-hidden flex items-center pt-20">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-secondary/10 rounded-full blur-3xl floating-animation" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl floating-animation" style={{ animationDelay: "-3s" }} />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-secondary/8 rounded-full blur-3xl floating-animation" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl floating-animation" style={{ animationDelay: "-3s" }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-secondary/5 to-transparent rounded-full" />
       </div>
 
@@ -30,16 +30,16 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-8"
           >
-            {/* Badge - Institutional positioning */}
+            {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="inline-flex flex-col gap-2"
             >
-              <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2 w-fit">
-                <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-                <span className="text-sm text-muted-foreground">Turmas com vagas limitadas</span>
+              <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-secondary/20 rounded-full px-4 py-2 w-fit">
+                <span className="w-2 h-2 bg-secondary rounded-full" />
+                <span className="text-sm text-muted-foreground">Módulos disponíveis — vagas limitadas</span>
               </div>
               <span className="text-xs md:text-sm text-secondary font-medium">
                 O maior e mais avançado centro de formação em Inteligência Artificial do Maranhão
@@ -47,7 +47,7 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-display">
               IA aplicada ao{" "}
               <span className="text-gradient">seu negócio</span>
             </h1>
@@ -72,7 +72,7 @@ const HeroSection = () => {
                   transition={{ delay: 0.4 + index * 0.1 }}
                   className="flex items-center gap-3 text-foreground/90"
                 >
-                  <div className="p-2 bg-secondary/20 rounded-lg">
+                  <div className="p-2 bg-secondary/15 rounded-lg">
                     <item.icon className="w-4 h-4 text-accent" />
                   </div>
                   <span className="text-sm font-medium">{item.text}</span>
@@ -90,19 +90,19 @@ const HeroSection = () => {
               <Button 
                 variant="hero" 
                 size="xl" 
-                onClick={() => window.open(ENROLLMENT_URL, "_blank")} 
+                onClick={() => window.open(WHATSAPP_URL, "_blank")} 
                 className="w-full sm:w-auto"
               >
-                <Rocket className="w-5 h-5" />
-                Garanta sua vaga
+                <MessageCircle className="w-5 h-5" />
+                Fale com um consultor
               </Button>
               <Button variant="heroOutline" size="lg" onClick={scrollToProgram} className="w-full sm:w-auto">
-                Ver programa completo
+                Ver módulos
                 <ChevronDown className="w-4 h-4" />
               </Button>
             </motion.div>
 
-            {/* Exclusive/Personalized - WhatsApp CTA */}
+            {/* Exclusive classes CTA */}
             <motion.a
               href="https://wa.me/5598991234567?text=Olá! Tenho interesse em turmas exclusivas e personalizadas para minha empresa."
               target="_blank"
@@ -110,14 +110,13 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 }}
-              whileHover={{ scale: 1.02 }}
-              className="group flex items-center gap-3 bg-[hsl(0_0%_5%)] border border-[hsl(var(--gold))] rounded-xl px-5 py-3 w-fit cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--gold)/0.3)]"
+              className="group flex items-center gap-3 bg-[hsl(0_0%_5%)] border border-[hsl(var(--gold)/0.3)] rounded-xl px-5 py-3 w-fit cursor-pointer transition-all duration-300 hover:border-[hsl(var(--gold)/0.6)]"
             >
               <div className="p-1.5 bg-[hsl(var(--gold)/0.15)] rounded-lg">
                 <Crown className="w-4 h-4 text-[hsl(var(--gold))]" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xs font-bold bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(45_80%_60%)] bg-clip-text text-transparent">
+                <span className="text-xs font-bold text-gradient-gold">
                   Turmas exclusivas para sua empresa
                 </span>
                 <span className="text-[10px] text-muted-foreground">
@@ -139,12 +138,12 @@ const HeroSection = () => {
                 <img 
                   src={logoCeuma}
                   alt="Universidade Ceuma" 
-                  className="h-10 md:h-14 object-contain opacity-80"
+                  className="h-10 md:h-14 object-contain opacity-70"
                 />
                 <img 
                   src={logoOxygeni}
                   alt="Oxygeni HUB" 
-                  className="h-8 md:h-10 object-contain opacity-80"
+                  className="h-8 md:h-10 object-contain opacity-70"
                 />
               </div>
             </motion.div>
@@ -158,10 +157,7 @@ const HeroSection = () => {
             className="hidden lg:flex items-center justify-center"
           >
             <div className="relative">
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-secondary/20 rounded-full blur-3xl scale-110" />
-              
-              {/* Main logo */}
+              <div className="absolute inset-0 bg-secondary/15 rounded-full blur-3xl scale-110" />
               <motion.img
                 src={logoIcon}
                 alt="AcademIA Business"
@@ -169,8 +165,6 @@ const HeroSection = () => {
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
               />
-              
-              {/* Orbiting elements */}
               <motion.div
                 className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-2xl flex items-center justify-center shadow-lg"
                 animate={{ y: [0, -10, 0] }}
@@ -178,7 +172,6 @@ const HeroSection = () => {
               >
                 <Brain className="w-8 h-8 text-foreground" />
               </motion.div>
-              
               <motion.div
                 className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg"
                 animate={{ y: [0, 10, 0] }}
@@ -191,7 +184,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator with arrow */}
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -206,7 +199,6 @@ const HeroSection = () => {
           <MousePointer2 className="w-5 h-5 text-muted-foreground mb-1" />
           <ChevronDown className="w-6 h-6 text-accent" />
         </motion.div>
-        <span className="text-xs text-muted-foreground">Role para baixo</span>
       </motion.div>
     </section>
   );

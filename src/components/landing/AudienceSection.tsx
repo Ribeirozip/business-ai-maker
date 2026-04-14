@@ -18,12 +18,12 @@ const notForWho = [
 ];
 
 const AudienceSection = () => {
-  const scrollToCTA = () => {
-    document.getElementById("investimento")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToProgram = () => {
+    document.getElementById("programa")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -32,7 +32,7 @@ const AudienceSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-display">
             Para quem é o <span className="text-gradient">AcademIA Business</span>?
           </h2>
           <p className="text-base md:text-lg text-muted-foreground">
@@ -48,9 +48,9 @@ const AudienceSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="h-full gradient-card rounded-2xl p-6 md:p-8 border border-secondary/30 card-shadow">
+            <div className="h-full border-premium rounded-2xl p-6 md:p-8">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-secondary/15 rounded-xl flex items-center justify-center">
                   <Check className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground">Para quem é</h3>
@@ -65,7 +65,7 @@ const AudienceSection = () => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start gap-3"
                   >
-                    <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 rounded-full bg-secondary/15 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-4 h-4 text-secondary" />
                     </div>
                     <span className="text-foreground">{item}</span>
@@ -82,7 +82,7 @@ const AudienceSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="h-full bg-card/30 rounded-2xl p-6 md:p-8 border border-border/50">
+            <div className="h-full bg-card/20 rounded-2xl p-6 md:p-8 border border-border/30">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-destructive/10 rounded-xl flex items-center justify-center">
                   <X className="w-6 h-6 text-destructive/70" />
@@ -117,8 +117,8 @@ const AudienceSection = () => {
           transition={{ delay: 0.4 }}
           className="text-center"
         >
-          <Button variant="hero" size="lg" onClick={scrollToCTA}>
-            Esse treinamento é para mim
+          <Button variant="hero" size="lg" onClick={scrollToProgram}>
+            Ver módulos disponíveis
             <ArrowRight className="w-4 h-4" />
           </Button>
         </motion.div>

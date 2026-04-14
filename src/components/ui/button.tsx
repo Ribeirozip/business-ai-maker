@@ -11,13 +11,13 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border-2 border-accent/40 bg-transparent text-foreground hover:bg-accent/10 hover:border-accent",
+        outline: "border-2 border-secondary/30 bg-transparent text-foreground hover:bg-secondary/10 hover:border-secondary/50",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-md",
-        ghost: "hover:bg-accent/10 hover:text-accent",
+        ghost: "hover:bg-muted/30 hover:text-foreground",
         link: "text-accent underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-primary to-secondary text-foreground font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300",
-        heroOutline: "border-2 border-foreground/30 bg-transparent text-foreground hover:bg-foreground/10 hover:border-foreground/60 backdrop-blur-sm",
-        cta: "bg-gradient-to-r from-secondary to-vibrant-blue text-foreground font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 pulse-glow",
+        hero: "bg-gradient-to-r from-primary to-secondary text-foreground font-bold shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all duration-300",
+        heroOutline: "border border-foreground/20 bg-transparent text-foreground hover:bg-foreground/5 hover:border-foreground/40 backdrop-blur-sm",
+        cta: "bg-secondary text-foreground font-bold shadow-lg hover:bg-secondary/90 hover:shadow-xl hover:scale-[1.02] transition-all duration-300",
       },
       size: {
         default: "h-11 px-6 py-2",

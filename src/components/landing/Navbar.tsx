@@ -43,7 +43,7 @@ const Navbar = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
+        <div className="container mx-auto px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a
             href="#inicio"
@@ -51,18 +51,18 @@ const Navbar = () => {
             className="flex items-center gap-3"
           >
             <img src={logoCircular} alt="AcademIA" className="h-9 w-9 object-contain" />
-            <span className="font-bold text-foreground text-lg tracking-tight hidden sm:block">
-              Academ<span className="text-secondary">.IA</span>
+            <span className="font-display text-foreground text-xl tracking-tight hidden sm:block">
+              Academ<span className="italic text-[hsl(var(--gold))]">.IA</span>
             </span>
           </a>
 
           {/* Desktop links */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNav(link.href)}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/30"
+                className="text-[11px] uppercase tracking-[0.2em] font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </button>
@@ -71,14 +71,13 @@ const Navbar = () => {
 
           {/* CTA */}
           <div className="flex items-center gap-3">
-            <Button
-              size="sm"
+            <button
               onClick={() => window.open(WHATSAPP_URL, "_blank")}
-              className="hidden md:inline-flex bg-secondary text-foreground hover:bg-secondary/90 font-semibold"
+              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[hsl(var(--gold)/0.3)] bg-[hsl(var(--gold)/0.05)] hover:bg-[hsl(var(--gold)/0.12)] transition-all text-[10px] font-semibold tracking-[0.2em] uppercase text-[hsl(var(--gold))]"
             >
-              <MessageCircle className="w-4 h-4" />
-              Fale conosco
-            </Button>
+              <span>Fale conosco</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--gold))]" />
+            </button>
 
             {/* Mobile toggle */}
             <button

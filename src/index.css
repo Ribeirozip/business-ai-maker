@@ -6,48 +6,50 @@
 
 @layer base {
   :root {
-    /* AcademIA Business - Premium Color Palette */
-    --navy-deep: 233 100% 8%;
+    /* AcademIA Business - Luxe Champagne Palette */
+    --navy-deep: 225 60% 5%;
     --royal-blue: 228 79% 46%;
     --vibrant-blue: 224 100% 60%;
     --light-blue: 221 100% 84%;
+    --champagne: 39 47% 56%;
+    --champagne-bright: 46 65% 52%;
     
     /* Semantic tokens */
-    --background: 233 100% 8%;
+    --background: 225 60% 5%;
     --foreground: 0 0% 100%;
 
-    --card: 228 50% 14%;
+    --card: 225 45% 9%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 233 100% 8%;
+    --popover: 225 60% 5%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 228 79% 46%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 224 100% 60%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 39 47% 56%;
+    --secondary-foreground: 225 60% 5%;
 
-    --muted: 228 30% 20%;
-    --muted-foreground: 221 60% 75%;
+    --muted: 225 25% 15%;
+    --muted-foreground: 220 15% 65%;
 
-    --accent: 221 100% 84%;
-    --accent-foreground: 233 100% 8%;
+    --accent: 39 47% 56%;
+    --accent-foreground: 225 60% 5%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 228 30% 22%;
-    --input: 228 30% 18%;
-    --ring: 224 100% 60%;
+    --border: 225 25% 18%;
+    --input: 225 25% 14%;
+    --ring: 39 47% 56%;
 
-    --radius: 0.75rem;
+    --radius: 0.25rem;
 
     /* Premium accent colors */
-    --gold: 45 100% 51%;
-    --gold-dark: 40 80% 40%;
+    --gold: 39 47% 56%;
+    --gold-dark: 40 60% 42%;
     --exclusive-dark: 0 0% 5%;
-    --premium-shimmer: 228 60% 55%;
+    --premium-shimmer: 39 47% 56%;
 
     /* Custom gradients */
     --gradient-hero: linear-gradient(160deg, hsl(233 100% 8%) 0%, hsl(228 60% 18%) 50%, hsl(233 100% 8%) 100%);

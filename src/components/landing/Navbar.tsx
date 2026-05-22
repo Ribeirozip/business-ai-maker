@@ -110,14 +110,13 @@ const Navbar = () => {
                 </button>
               ))}
               <div className="mt-4">
-                <Button
-                  size="lg"
+                <button
                   onClick={() => { setMobileOpen(false); window.open(WHATSAPP_URL, "_blank"); }}
-                  className="w-full bg-secondary text-foreground hover:bg-secondary/90 font-semibold"
+                  className="w-full px-6 py-4 bg-[hsl(var(--champagne))] hover:bg-[hsl(var(--champagne-bright))] text-[hsl(var(--background))] font-semibold rounded-sm transition-all inline-flex items-center justify-center gap-2 text-sm uppercase tracking-wider"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Fale conosco
-                </Button>
+                </button>
               </div>
             </div>
           </motion.div>
